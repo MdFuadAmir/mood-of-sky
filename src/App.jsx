@@ -50,16 +50,12 @@ const App = () => {
         }}
       >
         <div className="absolute inset-0 bg-linear-to-r from-purple-400 to-purple-700 opacity-40" />
+        <img src={logo} alt="" className="w-16 h-16 m-6" />
       </div>
 
       {/* Main */}
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4">
-        <div className="flex flex-col justify-center items-center">
-          <img
-            src={logo}
-            alt=""
-            className="w-12 h-12 bg-purple-200 rounded-full"
-          />
+        <div className="flex justify-center items-center">
           <h1 className="text-4xl font-bold text-white mb-4">
             MOOD OF <span className="text-sky-500">SKY</span>
           </h1>
