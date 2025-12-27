@@ -40,7 +40,7 @@ const App = () => {
     }
   };
   return (
-    <div className="min-h-screen relative overflow-hidden px-4 py-8">
+    <div className="min-h-screen relative overflow-hidden">
       {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -54,7 +54,7 @@ const App = () => {
       </div>
 
       {/* Main */}
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4">
+      <div className="relative py-8 z-10 min-h-screen flex flex-col items-center justify-center px-4">
         <div className="flex justify-center items-center">
           <h1 className="text-4xl font-bold text-white mb-4">
             MOOD OF <span className="text-sky-500">SKY</span>
@@ -88,10 +88,14 @@ const App = () => {
             </button>
           </div>
         </form>
-
         {loading && <Loading />}
         {error && <ErrorMessage message={error} />}
         {weather && !loading && !error && <WeatherCard weather={weather} />}
+      </div>
+      <div className="relative">
+        <p className="text-center text-gray-700 p-4">
+          Copyright © {new Date().getFullYear()} - Md Fuad Amir All right reserved
+        </p>
       </div>
     </div>
   );
